@@ -32,7 +32,7 @@ In this project, we explore the complex interplay between ethics, privacy, and i
 
 ### Download
 For more detailed insights into our findings and discussions, please download our full report:
-[EEIS Week 4 Submission - Team Super PDF](https://github.com/JinLee0811/UTS_EEIS_Week4/blob/main/EEIS.pdf)
+[EEIS Week 4 Submission - Team Super PDF](https://github.com/JinLee0811/UTS_EEIS_Week4/blob/main/_week4.pdf)
 
 ---
 
