@@ -1,33 +1,39 @@
 \documentclass[12pt,a4paper]{article}
-
+\usepackage{enumitem}
 % Define margins
 \setlength{\topmargin}{-1.0cm}
 \setlength{\oddsidemargin}{0.1cm}
 \setlength{\textwidth}{16.5cm}
 \setlength{\textheight}{23.0cm}
 
+% Use Times New Roman font
 \usepackage{times}
-\usepackage{graphicx} %LaTeX package to import graphics
-\graphicspath{{images/}}%configuring the graphicx package
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref} 
+\urlstyle{rm}
 
+\renewcommand{\rmdefault}{ptm}
+
+\usepackage{graphicx} % LaTeX package to import graphics
+\graphicspath{{images/}} % Configuring the graphicx package
 
 % Define header and footer
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{{\includegraphics[height=.65cm]{images/UTS.png}}}
-\rhead{\textbf{\textit{Group Assignment}} }
+\rhead{\textbf{\textit{Week 4 Submission}}}
 \cfoot{\textbf{\textit{\thepage}}}
 \renewcommand{\headrulewidth}{0.7pt}
 \setlength{\headheight}{14pt}
 
+% Adjust section and subsection title formats
 \usepackage{titlesec}
 \titleformat{\section}
   {\normalfont\fontsize{14}{15}\bfseries}{\thesection}{1em}{}
 \titleformat{\subsection}
-  {\normalfont\fontsize{14}{15}\bfseries}{\thesubsection}{1em}{}
+  {\normalfont\fontsize{12}{15}\bfseries}{\thesubsection}{1em}{}
 
-% This is to define a style with no footer for the table of contents
+% Define a style with no footer for the table of contents
 \fancypagestyle{nofooter}{%
   \fancyfoot{}%
 }
@@ -35,173 +41,152 @@
 % To manage references
 \usepackage{natbib}
 \usepackage[labelfont=bf]{caption}
+
 \begin{document}
 
-%----------------------------------------------------------------------------------------
-%	TITLE PAGE
-%----------------------------------------------------------------------------------------
+% TITLE PAGE
 
-\begin{titlepage} % Suppresses displaying the page number on the title page and the subsequent page counts as page 1
+\begin{titlepage}
 
-	\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for horizontal lines, change thickness here
-	
-	\center % Centre everything on the page
-	
-	%------------------------------------------------
-	%	Headings
-	%------------------------------------------------
-
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\center
 
 \vspace*{1\baselineskip}
-
 \includegraphics[width=0.15\textwidth]{images/UTS.png}\\
+\textsc{\LARGE University of Technology Sydney}\\[2.0cm]
+\textsc{\Large (32557) Enabling Enterprise Information Systems}\\[0.2cm]
 
- 
-	\textsc{\LARGE University of Technology Sydney}\\[1.5cm] % Main heading such as the name of your university/college
-	
-	\textsc{\Large 32557}\\[0.15cm]
-         \textsc{\Large Enabling Enterprise Information Systems}\\[0.5cm]% Major heading such as course name
-	
-	\textsc{\large Week 4 Submission Team Super}\\[0.5cm] % Minor heading such as course title
-	
-	%------------------------------------------------
-	%	Title
-	%------------------------------------------------
-	
-	\HRule\\[0.4cm]
-	
-	% {\huge\bfseries Ethics Privacy and Information Security}\\[0.4cm] % Title of your document
-         {\huge\bfseries\mbox{Ethics Privacy and Information Security}\\[0.7cm]}
+\HRule\\[0.6cm]
+{\huge\bfseries Ethics, Privacy and Information security}\\[0.4cm]
+\HRule\\[10cm]
 
+\emph{by Team Super} \\
+{ Seoyoon Kim (25388442) [Group leader] \\}
+{ Jin Lee (25388733)  \\}
+{ Ariel Manueke (25207919) \\}
+{ Nonthawat Praisompong (25233750) \\}
 
-	
-	\HRule\\[2cm]
-	
-	%------------------------------------------------
-	%	Author(s)
-	%------------------------------------------------
-	\vspace*{2\baselineskip}
+\vfill
+{\large\today}
 
-\emph{by} \\[1ex]
-%Submitted by \\[\baselineskip]
-{ Seoyoon Kim (25388442) [Group leader] \\ \par} % Editor list
-{ Jin Lee (25388733)  \\ \par} % Editor list
-{ Ariel Manueke(25207919) \\ \par} % Editor list
-{ Nonthawat Praisompong (25233750) \\ \par} % Editor list
+\vfill
 
-	% \begin{minipage}{0.4\textwidth}
-	% 	\begin{flushright}
-	% 		\large
-	% 		\textit{Supervisor}\\
-	% 		Dr. Caroline \textsc{Becker} % Supervisor's name
-	% 	\end{flushright}
-	% \end{minipage}
-	
-	% If you don't want a supervisor, uncomment the two lines below and comment the code above
-	%{\large\textit{Author}}\\
-	%John \textsc{Smith} % Your name
-	
-	%------------------------------------------------
-	%	Date
-	%------------------------------------------------
-	
-	\vfill\vfill\vfill % Position the date 3/4 down the remaining page
-	
-	{\large\today} % Date, change the \today to a set date if you want to be precise
-	
-	%------------------------------------------------
-	%	Logo
-	%------------------------------------------------
-	
-	%\vfill\vfill
-	%\includegraphics[width=0.2\textwidth]{placeholder.jpg}\\[1cm] % Include a department/university logo - this will require the graphicx package
-	 
-	%----------------------------------------------------------------------------------------
-	
-	\vfill % Push the date up 1/4 of the remaining page
-	
 \end{titlepage}
 
-%----------------------------------------------------------------------------------------
+% TABLE OF CONTENTS
 
-\newpage
-\title{Week 4 Submission Team Super}
-\author{
-  Team Member:\\
-  Seoyoon Kim (25388442) [Group Leader]\\
-  Jin Lee (25388733)\\
-  Ariel Manueke (25207919)\\
-  Nonthawat Praisompong (25233750)
-}
-\date{}
+\tableofcontents
+\thispagestyle{nofooter}
+\cleardoublepage
 
-\maketitle
+\pagebreak
 
-\section*{Ethics Privacy and Information Security}
-32557 – Enabling Enterprise Information Systems\\
-CB11.B3.101
-
-\subsection*{Ethical Scenario Discussion}
-\textbf{Question 1:}\\[0.2cm]
-\textbf{(A)}\\[-0.4cm]
-
-\noindent In our view, under the rights approach, monitoring internet browsing by supervisors is ethically contentious because it infringes on an individual’s right to privacy. While employers may have legitimate interests in ensuring productive use of work time and protecting company assets, these interests must be balanced against employee’s rights.\\
-
-\noindent For example, if your company only monitors websites accessed using company equipment to ensure that employees do not visit harmful or inappropriate content that could threaten company security, and this is clearly communicated and agreed to by employees, the monitoring may be considered ethical under the rights approach. Furthermore, if the monitoring is explicitly stated in the employment contract, the employee was provided with information about the kind of monitoring, why it is necessary, and how the information collected will be used, and the employee agreed to work under these conditions, then it would be ethical. However, if a supervisor tracks an employee's personal email or social media activity without a policy or notice, it violates the employee's right to privacy and is clearly unethical because such monitoring violates an individual's rights without informed consent.\\  
- 
-\noindent Therefore, from the perspective of rights approach, the ethics of monitoring internet browsing by managers should be based on the rights of employees, especially privacy and informed consent. The importance of respecting rights and ethical business practices, as emphasized in "Business Ethics: A Stakeholder and Issues Management Approach," requires a nuanced approach to managing stakeholder interests while respecting individual rights (Weiss, 2014). This monitoring must be respected and transparent, and employers must find the proper balance between legitimate business interests and protecting employees' fundamental rights.\\ 
+% DOCUMENT CONTENT STARTS HERE
+% You can start writing your document content here.
 
 
-\noindent 
-\textbf{Question B:} Design requirements for an information system in an employment agency.\\
-Utilitarianism emphasizes the maximization of overall happiness and satisfaction resulting from actions. The design of information systems should aim to exert a positive influence on as many individuals as possible, avoiding discrimination and offering equal opportunities to all candidates.
+% Student %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection*{ACS Code of Professional Conduct Summary}
-ACS has three fundamental values in its professional ethics code: honesty, trustworthiness, and respect. These principles guide ICT professionals in creating a healthy work environment and maintaining the dignity and integrity of their profession.
+% Seoyoon %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection*{YouTube Video Summary}
-\textbf{Title:} "How To Recognize and Avoid Phishing Scams | Explained - YouTube"\\
-\textbf{Length:} 08:54\\
-\textbf{URL:} \url{https://www.youtube.com/watch?v=Yz0PnAkeRiI}\\
-This video explains phishing, a sophisticated cyberattack aimed at stealing user data through deceptive social engineering tactics. It emphasizes the importance of vigilance and awareness in guarding against these scams.
+\setcounter{page}{1}
 
-\subsection*{Discussion on Scams}
-According to the Australian Competition & Consumer Commission, impersonation and product and service scams are prevalent, exploiting technology to deceive victims. Awareness and proper verification are key to protecting oneself from these scams.
+\section{Question 1}
+\subsection{Ethical approaches with scenarios}
+\label{sec:Question 1}
+\nocite{question_1.2}
 
-% PAP %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Scenario 1: The Rights Approach}
+
+In our view, under the rights approach, monitoring internet browsing by supervisors is ethically contentious because it infringes on an individual’s right to privacy. While employers may have legitimate interests in ensuring productive use of work time and protecting company assets, these interests must be balanced against employee’s rights.\\
+
+\noindent For example, if your company only monitors websites accessed using company equipment to ensure that employees do not visit harmful or inappropriate content that could threaten company security, and this is clearly communicated and agreed to by employees, the monitoring may be considered ethical under the rights approach. Furthermore, if the monitoring is explicitly stated in the employment contract, the employee was provided with information about the kind of monitoring, why it is necessary, and how the information collected will be used, and the employee agreed to work under these conditions, then it would be ethical. However, if a supervisor tracks an employee's personal email or social media activity without a policy or notice, it violates the employee's right to privacy and is clearly unethical because such monitoring violates an individual's rights without informed consent. \\
+
+\noindent Therefore, from the perspective of rights approach, the ethics of monitoring internet browsing by managers should be based on the rights of employees, especially privacy and informed consent. The importance of respecting rights and ethical business practices, as emphasized in ``Business Ethics: A Stakeholder and Issues Management Approach'' requires a nuanced approach to managing stakeholder interests while respecting individual rights \citep{question_1.3}. This monitoring must be respected and transparent, and employers must find the proper balance between legitimate business interests and protecting employees' fundamental rights.
+
+
+\subsubsection{Scenario 2: The Utilitarian Approach}
+
+Utilitarianism emphasizes the maximization of overall happiness and satisfaction resulting from actions. According to this ethical philosophy, the design of information systems should aim to exert a positive influence on as many individuals as possible. Consider a scenario in which a system preferentially displays male candidates over female ones to enhance recruitment efficiency. Although this might initially increase the company's productivity through faster hiring processes, it would likely exacerbate gender-based discrimination in the long term, thereby intensifying societal inequalities and detracting from widespread happiness.\\
+
+\noindent Moreover, within the IT industry, a recruitment system that prioritizes white applicants over Black applicants can deepen existing racial disparities, undermining diversity and innovation and causing detrimental long-term effects on both the company and society at large. From a utilitarian perspective, such a system would negatively impact the well-being of the majority, and therefore, the design requirements of this information system would be deemed unfavorable.\\
+
+\noindent The ``Ethics in Information Technology'' explores the application of utilitarian principles in the realm of technological decision-making that has implications for individuals and society. He argues that the utilitarian approach necessitates a comprehensive assessment of the overall outcomes of these decisions and their impact on the well-being of all stakeholders involved \citep{question_1.1}. Similarly, the ``The Handbook of Information and Computer Ethics'', highlights the necessity of assessing the wide-reaching societal impacts of technological choices, advocating for a thorough evaluation that considers long-term societal welfare \citep{question_1.2}.\\
+
+\noindent In conclusion, aligning with utilitarian ethics, the design of information systems should extend beyond short-term efficiency gains and consider the long-term consequences for society. By avoiding discrimination and offering equal opportunities to all candidates, such designs are expected to promote collective well-being and support the creation of an equitable and innovative community.
+
+
+\pagebreak
+% Ariel %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\setcounter{page}{3}
+
+\section{Question 2}
+\subsection{The ACS Code of Professional Ethics, Conduct and Complaints}
+\label{sec:Question 2}
+
+ACS has three fundamental values in its professional ethics code in its latest publication \citep{question_2.1}. First is honesty, to create a healthy work environment where members need to have open and honest personalities, including holding the truth, not purposely distorting facts, and keeping silent when any misconduct occurs regarding their employers and position. The second value is trustworthiness, upholding dignity as an ICT professional, including having responsibility regarding results, practicing integrity, learning proactively, maintaining company secrets, good communication, know knowing your limits in authority. Last is respect, which aims to support a safe working environment. Members have respect for others, including respect, support, and treat everyone equally regarding their personal, work, and intellectual property rights. Members also have to respect their profession, including having and sharing knowledge in their field, encouraging and supporting other ICT professionals, and contributing to enhancing and advancing the development of information technology.\\
+
+% Can you please fix the width size of the path
+% \noindent \\Path: Home/Menu/ACS/Ethics-Conduct,\_Education\_&\_Complaints/Professional\_Ethic, Conduct\_&\_Complaints
+\noindent\parbox{16.5cm}{
+    \textbullet\ \textbf{Path:} Home/Menu/ACS/Ethics-Conduct\textunderscore\,Education\textunderscore\&\textunderscore Complaints/Professional\textunderscore Ethic,\\
+     \hspace*{1.35cm}Conduct\textunderscore\&\textunderscore Complaints
+} 
+
+\noindent \\ \textbullet\ \textbf{Word Count:} 150
+
+\pagebreak
+
+% Jin%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \setcounter{page}{4}
 
+\section{Question 3}
+\subsection{Understanding and Preventing Phishing Attacks}
+\label{sec:Question 3}
+\nocite{question_3.1}
+
+\noindent This video explains phishing, a sophisticated cyberattack aimed at stealing user data through deceptive social engineering tactics. It vividly illustrates the attack with a compelling example of a fake email, supposedly from the U.S. Department of Justice, showing how attackers meticulously create a sense of urgency to compromise personal information. Phishing often involves clever impersonation of authoritative figures or major brands, and exploiting current events to deceive users effectively. The consequences include significant financial loss and identity theft. To guard against phishing, the video strongly recommends vigilance, manual entry of web addresses, not sharing personal details online, and using secure email gateways. It stresses the importance of contacting authorities and securing accounts if attacked, highlighting awareness and prevention as key defenses against these scams.\\
+
+\noindent For a detailed exploration of phishing scams and prevention techniques, refer to the following video resource:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Title:} How To Recognize and Avoid Phishing Scams | Explained - YouTube
+    \item \textbf{Video Length:} 8:54
+    \item \textbf{URL:} https://www.youtube.com/watch?v=Yz0PnAkeRiI
+    \item \textbf{Word count:} 99
+\end{itemize}
+
+\pagebreak
+
+% PAP%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{page}{5}
 \section{Question 4}
-\subsection{Protecting Yourself Against Website and Email Scams: Essential Tips}
+\subsection{How Scammers Infiltrate Our Precious Data}
 \label{sec:Question 4}
 
-According to the Australian Competition \& Consumer Commission \citep{question_4.1}, there are five principal scam types: social media, online messaging and app based scams; Website scams; Phone scams; Email scams and Text or SMS scams. From these scams I select website scams and emails scams due are the most recurrent kind of scams. 
+According to the Australian Competition \& Consumer Commission (2023), the scammer has devised a new trick or storytelling for stealing personal information. Scammers improve their capability to exploit benefits from technology, products, services, and occurring events to deceive victims into believing that they are real \citep{question_4}. In this assignment, we consider impersonation and product and service scams as a discussion topic.
 
-\subsubsection{Website scams}
+\subsubsection{Impersonation Scams}
 
-\begin{itemize}
+\begin{quote}
+The scammers develop new methods for deceiving victims that the trusted organisations contact, such as police, banks, and well-known businesses, including the government, and disguise as a victim's relative or family member \citep{question_4}. Scammers trick you with different mediums, such as email or messages designed for victims to easily give them precious information \citep{question_4}. Moreover, scammers adopt technology to disguise their calls and messages as they come from legitimate phone numbers.
+\end{quote}
 
-    \item{Verify correct website email: Make sure that the email associated with the website is legitimate and matches the official domain. }
+\subsubsection{Product and Service Scams}
 
-    \item{Never authenticate from unknown links: Avoid logging in or providing personal information through links that you haven't verified as legitimate. }
+\begin{quote}
+Scammers pretend to be buyers or sellers by using fake websites or verifying retailers to offer products and services that cannot be real \citep{question_4}. Furthermore, they trick victims into using logos of reliable sources such as the Australian Business Number (ABN), which are difficult to check \citep{question_4}. Also, sending fake invoices or bills confuses victims, in the worst case, they end up paying for scammer bills instead of real ones \
+\end{quote}
 
-    \item{Use well-known companies' websites for online purchases or transactions: Stick to reputable and established companies' websites when making online transactions to reduce the risk of scams. }
+\subsection{How To Realise New Scammers' Tricks is Crucial}
 
-    \item{Google the company official website and authenticate there to check if the transaction or payment is recorded there too. }
+Based on the advancement of privacy, only the data owner can access data such as bank accounts and credit card numbers, including personal details. Scammer always develops new methods to deceive customers that they are staff from reliable companies. When customers permit them only once, scammers will access and exploit personal data, which causes unbelievable disadvantages to victims without consent.
 
-\end{itemize}
-
-\subsubsection{Email scams}
-
-\begin{itemize}
-
-
-    \item{Always verify email address domains for authenticity: Check that the email address domain matches the legitimate domain of the organization or individual purportedly sending the email.}
-
-    \item{In case of any money transfer, verify with the department or person requesting the transaction: Before proceeding with any money transfers requested via email, independently verify the request with the relevant department or person through a trusted communication channel.} 
-
-\end{itemize}
 \pagebreak
 
 
@@ -211,6 +196,8 @@ According to the Australian Competition \& Consumer Commission \citep{question_4
 \bibliographystyle{lsharvard}
 % Add here the bib file with your references
 \bibliography{references}
+	
+\def\UrlBreaks{\do\/\do-}
 
 \clearpage
 \end{document}
